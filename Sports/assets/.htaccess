@@ -1,0 +1,4 @@
+#prevent Directory Listing
+Options -Indexes
+#Echo Error Message
+ErrorDocument 403 "Hello you cant enter this directory"

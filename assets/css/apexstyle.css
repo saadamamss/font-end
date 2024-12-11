@@ -1,0 +1,419 @@
+/*==================================
+* Author        : "ThemeSine"
+* Template Name : Sinemkt  HTML Template
+* Version       : 1.0
+==================================== */
+
+/*==================================
+font-family: 'Roboto', sans-serif;
+==================================== */
+
+/*=========== TABLE OF CONTENTS ===========
+1.  General css (Reset code)
+2.  Top-area
+3.  Welcome-hero
+4.  Populer-post
+5.  New-arrivals  
+6.  Sofa-coolection
+7.  Features
+8.  Blog
+9.  Clients
+10. News-letter
+11. Footer
+==========================================*/
+
+/*-------------------------------------
+		1.General css (Reset code)
+--------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.px-0 {
+  padding: 0px;
+}
+.m-0 {
+  margin: 0px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #a09e9c;
+  background: #fff;
+  text-transform: capitalize;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  display: inline-block;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  line-height: 1.8;
+}
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+ul li {
+  list-style: none;
+}
+select,
+input,
+textarea,
+button {
+  box-shadow: none;
+  outline: 0 !important;
+}
+button {
+  background: transparent;
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.3s 0.3s ease;
+  -moz-transition: opacity 0.3s 0.3s ease;
+  -ms-transition: opacity 0.3s 0.3s ease;
+  -o-transition: opacity 0.3s 0.3s ease;
+  transition: opacity 0.3s 0.3s ease;
+  opacity: 0;
+}
+
+p {
+  font-size: 13.8px;
+  font-family: cursive;
+}
+/*//////////////////////////////////////////*/
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 9999999;
+  transition: box-shadow 0.4s ease;
+  background-color: #fff;
+}
+header .navbar.bootsnav {
+  padding: 0px;
+  max-height: 70px;
+  border: none !important;
+}
+.mynav {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mynav .menu,
+.mynav .nav,
+.mynav ul li {
+  height: 100%;
+}
+.mynav ul li {
+  display: flex;
+  align-items: center;
+}
+#check1 {
+  position: relative;
+  padding: 10px;
+  height: 100%;
+  flex: 0.02;
+  appearance: none;
+  display: none;
+}
+#check1::after {
+  content: "\f0c9";
+  font: normal normal normal 25px/1 FontAwesome;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 0px;
+  cursor: pointer;
+}
+#check1:checked:after {
+  content: "\f00d";
+  font: normal normal normal 25px/1 FontAwesome;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 0px;
+  cursor: pointer;
+}
+
+header .logo {
+  flex: 1;
+}
+.logo label {
+  font-size: 25px;
+  color: rgb(68, 67, 67);
+  padding: 0px 5px;
+  display: none;
+}
+.rightbtns {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  column-gap: 5px;
+}
+.rightbtns button:nth-child(1):hover {
+  border: solid 1px #fb8e0b;
+}
+.rightbtns button:nth-child(1) {
+  transition: border 0.3s ease-in-out;
+}
+.rightbtns button:nth-child(2) {
+  background-color: #fb8e0b;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.rightbtns button:nth-child(2):hover {
+  background-color: #f89e30d5;
+}
+.menu {
+  flex: 2;
+  display: flex;
+}
+header ul {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header ul li a {
+  color: rgb(68, 67, 67);
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+header ul li a:hover {
+  color: #fb8e0b;
+}
+
+#check1:checked ~ .menu {
+  left: 0px;
+}
+
+/********************************/
+
+#section_1 h2 {
+  font-weight: bolder;
+}
+
+#section_1 .textframe .btn,
+#section_7 .btn {
+  background-color: #fb8e0b;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+#section_1 .textframe .btn:hover {
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/***********************************/
+#section_2 .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #fd5f037c;
+  color: #fd6003;
+}
+
+#section_2 .text h4 {
+  font-weight: bold;
+}
+#section_2 .text {
+  width: calc(100% - 40px);
+  padding: 0px 20px;
+}
+
+/***********************************/
+#section_3,
+#section_5 {
+  position: relative;
+}
+#section_3::before,
+#section_5::before,
+#section_3::after,
+#section_5::after {
+  content: "";
+  width: 200px;
+  height: 100%;
+  background-color: #f8f9fa;
+  display: block;
+  position: absolute;
+  top: 0px;
+}
+#section_3::before,
+#section_5::before {
+  left: -200px;
+}
+#section_3::after,
+#section_5::after {
+  right: -200px;
+}
+/***********************************/
+#section_4 .text .btn {
+  background-color: #fb8e0b;
+  color: #fff;
+}
+#section_4 .picture {
+  text-align: right;
+}
+/***********************************/
+#section_6 {
+  position: relative;
+  background-color: #fb8e0b;
+}
+#section_6 .card,
+#section_6 .auther,
+#section_6 h1 {
+  position: relative;
+  z-index: 10;
+}
+
+#section_6 .card::after {
+  content: "";
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  border-radius: 4px;
+  position: absolute;
+  bottom: -8px;
+  left: calc(50% - 20px);
+}
+.text-warning {
+  color: #fd6003 !important;
+}
+#section_6::before,
+#section_6::after {
+  content: "";
+  width: 200px;
+  height: 100%;
+  background-color: #fb8e0b;
+  display: block;
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+}
+#section_6::before {
+  left: -200px;
+  background-image: url("../images/circle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+}
+#section_6::after {
+  right: -200px;
+}
+
+/***********************************/
+.footer .logo {
+  flex: 2;
+}
+.footer .ul2 {
+  flex-direction: 2;
+  display: flex;
+  justify-content: end;
+}
+.footer .ul1 {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/************************************/
+
+@media (max-width: 860px) {
+  header .logo label {
+    display: inline-block;
+  }
+  #check1 {
+    display: block;
+  }
+  .mynav .menu ul,
+  .mynav .menu ul li {
+    height: auto !important;
+  }
+  .mynav .menu {
+    position: fixed;
+    flex-direction: column;
+    top: 70px;
+    width: 300px;
+    left: -100%;
+    background: #3e3e3d;
+    transition: left 0.5s ease;
+    height: 100vh !important;
+  }
+  header ul {
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  header ul li {
+    width: 100%;
+  }
+  header ul li a {
+    padding: 10px 15px !important;
+    width: 100%;
+    color: #fff;
+  }
+  header ul li a:hover {
+    background-color: #ffffff66;
+    color: #fff;
+  }
+}
+
+@media (max-width: 485px) {
+  .rightbtns button:nth-child(2) {
+    display: none;
+  }
+}
+
+main {
+  overflow-x: hidden;
+}

@@ -1,0 +1,517 @@
+/*#cc3e57*/
+body {
+  font-family: Poppins, sans-serif;
+}
+.Literata {
+  font-family: Literata, sans-serif !important;
+}
+a {
+  text-decoration: none !important;
+}
+ul li {
+  list-style: none;
+}
+.mybg {
+  background-color: #ff8b15;
+}
+.mycolor {
+  color: #ff8b15 !important;
+}
+header {
+  height: 70px;
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+  background-color: #ff8b15;
+}
+
+header .navbar {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+header .navbar.sticked::after {
+  background-color: #ff7e0d;
+  box-shadow: 0 0 4px 2px #00000040;
+}
+header .navbar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff8b15;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.body #Home {
+  height: auto;
+  min-height: 600px;
+}
+
+#bars {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  top: auto;
+  appearance: none;
+}
+
+#bars::before {
+  content: "\f0c9";
+  font: normal normal normal 22px/1 FontAwesome;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0px;
+  color: #fff;
+}
+
+#bars:checked::before {
+  content: "\f00d";
+}
+.logo {
+  visibility: visible;
+}
+
+header .navbar #bars:checked ~ .menu {
+  height: 160px;
+  top: 70px;
+}
+
+.menu .nav .nav-item a {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.menu .nav .nav-item a.active {
+  color: #cc3e57;
+}
+
+.menu .nav .nav-item a:hover {
+  color: #cc3e57;
+}
+
+
+#shopbag {
+  position: relative;
+}
+#shopbag span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 6px;
+  top: 6px;
+  background-color: #c52542;
+  box-shadow: 0 0 0 3px #cc3e58c4;
+}
+
+/*******form search*******/
+.formbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.formbox form {
+  min-width: 38px;
+  width: auto;
+  height: 40px;
+}
+.formbox form label {
+  position: absolute;
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  margin: 0px;
+  right: 0px;
+  top: 0px;
+  border-radius: 0px 5px 5px 0px;
+  overflow: hidden;
+}
+.formbox form label::after {
+  content: "\f002";
+  font: normal normal normal 22px/1 FontAwesome;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.formbox form input {
+  display: inline-block;
+  width: 0px;
+  height: 38px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 0px;
+  z-index: 1;
+  opacity: 0;
+  border: solid 0.1px #cc3e57;
+  transition: opacity 0.25s ease-in-out, width 0.3s ease-in-out;
+}
+
+.activesearch .formbox form label::after {
+  color: #cc3e57 !important;
+}
+.activesearch .formbox form input {
+  padding: 0px 10px;
+  width: 270px !important;
+  opacity: 1;
+  transition: opacity 0.3s ease, width 0.4s ease-out !important;
+}
+.activesearch .formbox form input:empty ~ label::after {
+  content: "\f00d";
+}
+.activesearch .formbox form input.valid ~ label::after {
+  content: "\f002" !important;
+}
+
+.activesearch .menu {
+  visibility: hidden;
+}
+
+/****hide logo when search visible***************************/
+@media (max-width: 450px) {
+  .activesearch .logo {
+    visibility: hidden !important;
+  }
+}
+
+/****to visible menu and search input in large screen **********************/
+@media (min-width: 860px) {
+  .activesearch .formbox form label::after {
+    color: #cc3e57 !important;
+  }
+  .activesearch .formbox form input {
+    position: relative !important;
+    width: 270px !important;
+    opacity: 1;
+    transition: none !important;
+  }
+  .activesearch .formbox form input ~ label::after {
+    content: "\f002" !important;
+  }
+  .activesearch .formbox form input.valid ~ label::after {
+    content: "\f002" !important;
+  }
+
+  .activesearch .menu {
+    visibility: visible;
+  }
+}
+/************************************/
+.cart {
+  position: absolute;
+  right: 0px;
+  top: 60px;
+  background-color: #fff;
+  width: 320px;
+  height: auto;
+  transform: translateY(50px);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s ease, transform 0.6s ease, opacity 0.3s ease;
+}
+.cart.activearea {
+  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
+}
+
+.cart-item {
+  transition: background-color 0.4s ease-in-out;
+}
+.cart-item:hover {
+  background-color: #d5d5d540;
+}
+.cart-item a {
+  color: #222;
+  transition: all 0.3s ease;
+}
+.cart-item a:hover {
+  color: #ff7e0d;
+  padding-left: 10px;
+}
+
+.showincart {
+  position: relative;
+  overflow-x: hidden;
+  text-align: left !important;
+  transition: padding-right 0.3s ease;
+  float: right;
+  color: #fff !important;
+}
+.showincart:hover {
+  padding-right: 32px;
+}
+.showincart:hover::after {
+  transform: translateX(0px);
+  transition: transform 0.3s ease;
+  transition-delay: 0.1s;
+}
+.showincart::after {
+  content: "\f138";
+  font: normal normal normal 22px/1 FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 32px;
+  font-size: 16px;
+  transform: translateX(50px);
+}
+/************************************/
+/************************************/
+/************************************/
+
+/********sm********/
+
+/*******make float menu at 650px in small screen**********************************/
+@media (max-width: 650px) {
+  #bars {
+    display: block !important;
+    cursor: pointer;
+  }
+  .logo {
+    margin-left: 15px !important;
+  }
+  .menu {
+    position: absolute !important;
+    top: 0px;
+    background-color: #f39538;
+    width: 100%;
+    left: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease-out, top 0.5s ease-out;
+    z-index: -1;
+    visibility: visible !important;
+  }
+
+  .menu .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu .nav li a:hover {
+    background-color: beige !important;
+  }
+}
+
+/************************************/
+#Home .textbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#Home .textbox h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+#Home .textbox .btn:hover {
+  color: inherit;
+}
+#Home .textbox .btn {
+  width: 120px;
+  font-weight: 500;
+}
+#Home .picture {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+#Home .picture img {
+  width: 100%;
+  max-width: 400px;
+  /* animation: saad 2s linear; */
+  transform: translateY(-20px);
+}
+
+@keyframes saad {
+  0% {
+    transform: translateY(-300px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  55% {
+    transform: translateY(-20px);
+  }
+}
+/************************************/
+
+#Featured .textbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Featured .textbox h2 {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+#Featured .textbox .btn,
+#blog .textbox .btn {
+  width: 120px;
+}
+#Featured .textbox .btn:hover,
+#blog .textbox .btn:hover {
+  background-color: #222;
+  transition: all 0.3s ease-in-out;
+}
+#Featured .picture,
+#blog .picture {
+  position: relative;
+  overflow: hidden;
+  text-align: right;
+}
+#Featured .picture img,
+#blog .picture img {
+  width: 100%;
+  max-height: 500px;
+  transition: transform 0.3s ease;
+}
+#Featured {
+  position: relative;
+}
+#Featured .picture:hover img {
+  transform: scale(1.2);
+}
+/************************************/
+
+#blog .textbox h2 {
+  font-size: 45px;
+}
+#blog .textbox h2 a:hover {
+  color: #ff8b15;
+}
+#blog .textbox h2 a {
+  color: #222;
+  transition: color 0.3s ease;
+}
+/************************************/
+#products .productcard {
+  width: 100%;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 400px;
+}
+#products .productcard ._head .btn {
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+#products .productcard ._head .btn:hover {
+  color: #222;
+}
+#products .productcard:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+#products .productcard:hover .prodshow {
+  bottom: 0px;
+}
+#products .productcard:hover .prodimage img {
+  transform: scale(1.15);
+}
+#products .productcard .prodimage {
+  height: 255px;
+  max-height: 255px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+#products .productcard .prodimage img {
+  width: 100%;
+  max-width: 255px;
+  transition: transform 0.3s ease;
+}
+#products .productcard .prodshow {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+  transition: bottom 0.3s ease;
+}
+#products .productcard .prodshow a {
+  width: 100%;
+}
+#products .productcard .prodtext h4 {
+  font-weight: 400;
+}
+#products .productcard .prodtext .prodprice {
+  font-size: 18px;
+}
+/************************************/
+#Brands img {
+  width: 100%;
+  max-width: 200px;
+}
+/************************************/
+
+#footersection ul li {
+  padding: 10px 0px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+#footersection ul:not(.social) li:hover {
+  transform: translateX(10px);
+}
+
+#footersection .social li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff8b15;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+#footersection .social li:hover {
+  background-color: #222;
+}
+
+/************************************/
+/************************************/
+/************************************/
+/************************************/
+/************************************/
+
+@media (min-width: 576px) {
+  .shadow-sm-none {
+    box-shadow: none !important;
+  }
+  .position-sm-absolute {
+    position: absolute !important;
+  }
+
+  .position-sm-relative {
+    position: relative !important;
+  }
+}
+
