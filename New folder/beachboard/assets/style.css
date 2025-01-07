@@ -1,0 +1,276 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+.m-auto {
+  margin: 0 auto;
+}
+.icon {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+#wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-color: tomato;
+}
+
+header {
+  top: 0px;
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.659);
+  height: 70px;
+  box-shadow: 0 0 10px 1px #fff;
+  z-index: 99;
+}
+
+header .logo img {
+  width: 50px;
+  height: 60px;
+}
+
+header .menu .nav {
+  gap: 50px;
+}
+header .links a {
+  padding: 10px 15px;
+  border: solid 1px #222;
+  border-radius: 5px;
+  color: #222;
+  font-weight: bold;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+header .links a:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.tob-bar label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.tob-bar #bars:checked ~ .menu li {
+  height: 40px !important;
+  opacity: 1;
+}
+.tob-bar #bars ~ .menu {
+  display: block;
+}
+
+#bars {
+  display: none;
+}
+
+.bunner {
+  height: 100vh;
+  background-image: url(bunner.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.bunner h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.bunner p {
+  font-size: 20px;
+}
+.bunner a,
+.bookcourse .content a {
+  border: solid 1px #222;
+  padding: 10px 100px;
+  border-radius: 100px 0px 100px 0px;
+  color: #fff;
+  background-color: #222;
+  margin-top: 60px;
+  display: inline-block;
+}
+
+.aboutus-section {
+  background-color: #fff;
+}
+.aboutus-section .kLSKA {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.aboutus-section .promocard {
+  flex: calc((100% / 3) - 90px);
+  box-sizing: border-box;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 320px;
+}
+
+.aboutus-section .JDSdy img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aboutus-section a,
+.services a {
+  border: solid 1px #222;
+  padding: 15px;
+  text-align: center;
+  border-radius: 100px 0px 100px 0px;
+  color: #fff;
+  background-color: #222;
+  margin-top: 15px;
+  display: block;
+}
+.aboutus-section p,
+.services p {
+  font-size: 100%;
+}
+.services {
+  background-color: #fff;
+}
+.services .nhgt {
+  flex: calc((100% / 3) - 100px);
+  min-width: 300px;
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+.services .JDSdy .pic {
+  height: 320px;
+  min-height: 320px;
+}
+.services .JDSdy img {
+  width: 100%;
+  height: 100%;
+}
+
+.ourExperts .excard {
+  flex: calc((100% / 3) - 100px);
+  padding: 0px;
+  min-width: 300px;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+.ourExperts .excard .pic {
+  height: 340px;
+  min-height: 340px;
+}
+.ourExperts .excard .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bookcourse {
+  position: relative;
+}
+.bookcourse .content {
+  position: relative;
+  height: 500px;
+  background-image: url(DJI_0328_Matze-Ried-2048x1364.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding: 0px;
+  z-index: 10;
+}
+
+.bookcourse::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.bookcourse .content {
+  color: #000;
+}
+.bookcourse .content h1 {
+  font-weight: bolder;
+  font-size: 4rem;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  background-image: url(nb.jpg);
+  background-size: cover;
+}
+footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+/***********************************************************/
+@media (max-width: 1024px) {
+}
+@media (max-width: 1280px) {
+}
+@media (max-width: 1535px) {
+}
+
+@media (max-width: 768px) {
+  .bunner h1 {
+    font-size: 2.8rem;
+  }
+  .bunner p {
+    font-size: 18px;
+  }
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(217, 215, 215);
+  }
+  .menu .nav {
+    flex-direction: column;
+    gap: 0px !important;
+  }
+  .menu .nav li {
+    width: 100%;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.2s ease;
+  }
+  .menu .nav li:hover {
+    background-color: #22222210;
+  }
+  .tob-bar label {
+    display: inline-block;
+  }
+
+  .bookcourse .content h1 {
+    font-size: 2.6rem;
+  }
+}

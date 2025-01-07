@@ -1,0 +1,154 @@
+/*loader*/
+#overlayer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 7100;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.loader {
+  z-index: 7700;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*end Loader------------ */
+
+.site-bunner {
+  background-image: url(../images/bunner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+
+._btn {
+  background-color: rgb(246, 80, 9);
+  border: solid 2px rgb(246, 80, 9);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 20px;
+  transition: all 0.4s ease;
+}
+._btn:hover {
+  background-color: rgba(246, 80, 9, 0.418);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0px 5px 3px 1px #0000006c;
+  transform: rotateX(10deg);
+  transform-origin: top;
+}
+
+.mycolor-1 {
+  color: rgb(246, 80, 9);
+}
+.mybglight {
+  background-color: rgb(255, 191, 164);
+}
+
+.B-H-Fs-3\:5 {
+  font-size: 3.5rem;
+}
+.B-H-Fs-3 {
+  font-size: 3rem;
+}
+.B-H-Fs-2\:5 {
+  font-size: 2.5rem;
+}
+.B-H-Fs-2 {
+  font-size: 2rem;
+}
+.B-H-Fs-1\:5 {
+  font-size: 1.5rem;
+}
+.B-H-Fs-1 {
+  font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  .B-H-Fs-3\:5 {
+    font-size: 3.1rem;
+  }
+  .B-H-Fs-3 {
+    font-size: 2.7rem;
+  }
+  .B-H-Fs-2\:5 {
+    font-size: 2.2rem;
+  }
+  .B-H-Fs-2 {
+    font-size: 1.7rem;
+  }
+  .B-H-Fs-1\:5 {
+    font-size: 1.2rem;
+  }
+  .B-H-Fs-1 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .B-H-Fs-3\:5 {
+    font-size: 2.8rem;
+  }
+  .B-H-Fs-3 {
+    font-size: 2.2rem;
+  }
+  .B-H-Fs-2\:5 {
+    font-size: 1.9rem;
+  }
+  .B-H-Fs-2 {
+    font-size: 1.4rem;
+  }
+  .B-H-Fs-1\:5 {
+    font-size: 1rem;
+  }
+  .B-H-Fs-1 {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 540) {
+  .B-H-Fs-3\:5 {
+    font-size: 2.4rem;
+  }
+  .B-H-Fs-3 {
+    font-size: 1.8rem;
+  }
+  .B-H-Fs-2\:5 {
+    font-size: 1.5rem;
+  }
+  .B-H-Fs-2 {
+    font-size: 1rem;
+  }
+  .B-H-Fs-1\:5 {
+    font-size: 0.8rem;
+  }
+  .B-H-Fs-1 {
+    font-size: 0.7rem;
+  }
+}
+
+.font-large {
+  font-size: large;
+}
+.font-larger {
+  font-size: larger;
+}
+.font-small {
+  font-size: small;
+}
+.font-smaller {
+  font-size: smaller;
+}
+.font-medium {
+  font-size: medium;
+}

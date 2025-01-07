@@ -1,0 +1,23 @@
+#about-section .img-container::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 75%;
+  background-color: red;
+  position: absolute;
+  left: -2.5%;
+  top: 0px;
+  transform: skewY(10deg);
+  border-radius: 15px;
+  z-index: 0;
+}
+
+#about-section .img-container img {
+  position: relative;
+  z-index: 10;
+}
+
+
+#promo-section{
+    
+}

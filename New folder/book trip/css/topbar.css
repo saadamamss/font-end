@@ -1,0 +1,119 @@
+header {
+  top: 0px;
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  z-index: 999;
+  transition: background-color 0.4s ease;
+}
+
+header .logo img {
+  width: 50px;
+  height: 60px;
+}
+
+header .menu .nav li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header .menu .nav li::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 4px;
+  position: absolute;
+  bottom: 0px;
+  left: auto;
+  right: 0px;
+  background-color: rgb(246, 80, 9);
+  transition: width 0.3s ease;
+}
+header .menu .nav li a.active {
+  color: rgb(246, 80, 9);
+}
+.showbg {
+  background-color: #333;
+  box-shadow: 0 3px 4px 4px #22222264;
+}
+header .menu .nav li:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0px;
+}
+header .menu .nav li a {
+  color: #fff;
+  padding: 5px;
+}
+header .menu .nav {
+  gap: 50px;
+}
+header .links a {
+  padding: 10px 15px;
+  border: solid 1px rgb(246, 80, 9);
+  border-radius: 5px;
+  color: rgb(246, 80, 9);
+  font-weight: bold;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+header .links a:hover {
+  background-color: rgb(246, 80, 9);
+  color: #fff;
+}
+
+.tob-bar label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.tob-bar #bars ~ .topnav .menu {
+  display: flex;
+  min-height: 100%;
+}
+
+#bars {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .tob-bar #bars:checked ~ .topnav .menu li {
+    height: 40px !important;
+    opacity: 1;
+  }
+  .tob-bar #bars ~ .topnav {
+    background-color: transparent;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    min-height: auto !important;
+    background-color: rgb(217, 215, 215);
+  }
+  .menu .nav {
+    flex-direction: column;
+    gap: 0px !important;
+  }
+  .menu .nav li {
+    width: 100%;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.2s ease;
+  }
+  .menu .nav li:hover {
+    background-color: #22222210;
+  }
+  .tob-bar label {
+    display: inline-block;
+  }
+}
